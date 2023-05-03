@@ -1,72 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./icons/all.min.css" />
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
-    <div class="page-container">
-      <div class="content-wrap">
-        <header class="header">
-          <div class="header__top">
-            <div class="header__content container">
-              <div class="header__title">
-                <div class="header__title-phone">
-                  <i class="fa-solid fa-phone"></i>
-                  <h3>03947-92394</h3>
-                </div>
-                <div class="header__title-email">
-                  <i class="fa-solid fa-envelope"></i>
-                  <h3>sh.gim.pushkina@mail.ru</h3>
-                </div>
-              </div>
-              <div class="header__logo">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-instagram"></i>
-              </div>
-            </div>
-          </div>
-          <div class="header__bottom">
-            <div class="header__container container">
-              <div class="header__titles">
-                <h2 class="header__titles-title">А. Навои</h2>
-                <p class="header__titles-subtitle">
-                  атындагы мектеп гимназия №18
-                </p>
-              </div>
-              <nav class="header__nav">
-                <ul class="header__menu">
-                  <li class="header__menu-link">
-                    <a href="./index.html">Главная</a>
-                  </li>
-                  <li class="header__menu-link"><a href="#news">Новости</a></li>
-                  <li class="header__menu-link">
-                    <a href="./about">О школе</a>
-                  </li>
-                  <li class="header__menu-link">
-                    <a href="./acridit">Аккредитация</a>
-                  </li>
-                  <li class="header__menu-link">
-                    <a href="#gallery">Галерея</a>
-                  </li>
-                  <li class="header__menu-link">
-                    <a href="#footer">Контакты</a>
-                  </li>
-                </ul>
-                <div class="burger-menu"><span></span></div>
-              </nav>
-            </div>
-          </div>
-        </header>
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content%}
+
+<div class="page-container">
+  <div class="content-wrap">
+    {% include 'include/header.html' %}
         <main class="container">
           <section class="hello">
             <h3 class="hello__title">Привет, мир!</h3>
@@ -83,7 +21,7 @@
             </p>
           </section>
           <section class="comments">
-            <h3>1 комментарий к “Привет, мир!”</h3>
+            <h3 class="comments__title">1 комментарий к “Привет, мир!”</h3>
             <div class="comments__content">
               <div class="comments__logo">
                 <img
@@ -92,68 +30,96 @@
                 />
                 <div class="comments__content-text">
                   <b><a href="">КОММЕНТАТОР WORDPRESS</a></b>
+                  <a class="hover" href="">13.09.2022 В 12:30</a>
                 </div>
               </div>
+              <p class="comments__text">
+                Привет! Это комментарий. <br />
+                Чтобы начать модерировать, редактировать и удалять комментарии,
+                перейдите на экран «Комментарии» в консоли. <br />
+                Аватары авторов комментариев загружаются с сервиса
+                <a href="">Gravatar.</a>
+              </p>
+              <div class="comments__wrap">
+                <p class="comments__wrap-text" href="" id="open">Ответить</p>
+              </div>
             </div>
+            <div class="comments__answer" id="answer">
+              <div class="comment__ansver-logo">
+                <h3 class="comments__answer-title">
+                  Комментарий к записи Комментатор WordPress
+                  <p id="close" class="open" href="">Отменить ответ</p>
+                </h3>
+              </div>
+              <form action="" class="comments__form">
+                <p class="comments__form-text">
+                  Ваш адрес email не будет опубликован. Обязательные поля
+                  помечены *
+                </p>
+                <label class="comments__label textarea" for="">
+                  <textarea
+                    placeholder="Введите комментарий..."
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </label>
+                <label class="comments__label" for="">
+                  <input type="text" placeholder="Имя*" name="" id="" />
+                  <input type="email" placeholder="Email*" name="" id="" />
+                  <input type="text" placeholder="Сайт" name="" id="" />
+                </label>
+                <div class="comments__form-confirm">
+                  <input type="checkbox" />
+                  <p>
+                    Сохранить моё имя, email и адрес сайта в этом браузере для
+                    последующих моих комментариев.
+                  </p>
+                </div>
+                <button class="comments__btn" type="submit">
+                  Оставить комментарий »
+                </button>
+              </form>
+            </div>
+          </section>
+          <section class="leave" id="leave">
+            <div class="comment__ansver-logo">
+              <h3 class="comments__answer-title">Оставьте комментарий</h3>
+            </div>
+            <form action="" class="comments__form">
+              <p class="comments__form-text">
+                Ваш адрес email не будет опубликован. Обязательные поля помечены
+                *
+              </p>
+              <label class="comments__label textarea" for="">
+                <textarea
+                  placeholder="Введите комментарий..."
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </label>
+              <label class="comments__label leave__flex" for="">
+                <input type="text" placeholder="Имя*" name="" id="" />
+                <input type="email" placeholder="Email*" name="" id="" />
+                <input type="text" placeholder="Сайт" name="" id="" />
+              </label>
+              <div class="comments__form-confirm">
+                <input type="checkbox" />
+                <p>
+                  Сохранить моё имя, email и адрес сайта в этом браузере для
+                  последующих моих комментариев.
+                </p>
+              </div>
+              <button class="comments__btn" type="submit">
+                Оставить комментарий »
+              </button>
+            </form>
           </section>
         </main>
       </div>
-      <footer class="footer">
-        <div class="footer__top">
-          <div class="container">
-            <div class="footer__content">
-              <div class="footer__contact">
-                <h2 class="footer__contact-title">Наши контакты</h2>
-                <span></span>
-                <div class="footer__logo">
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-youtube"></i>
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-              </div>
-              <div class="footer__email">
-                <h2 class="footer__email-text">
-                  Тоң району, Кажы-Сай айылы <br />
-                  Космонавтов көчөсү 28
-                </h2>
-                <p class="footer__email-link">
-                  <a href="">03947-92394 <i class="fa-solid fa-phone"></i></a>
-                </p>
-                <h3 class="footer__email-email">
-                  <a href=""
-                    >sh.gim.pushkina@mail.ru <i class="fa-solid fa-envelope"></i
-                  ></a>
-                </h3>
-              </div>
-            </div>
-            <div class="footer__nav">
-              <ul class="footer__menu">
-                <li class="footer__menu-links">
-                  <a href="./index.html">Главная</a>
-                </li>
-                <li class="footer__menu-link"><a href="#news">Новости</a></li>
-                <li class="footer__menu-link">
-                  <a href="./about">О школе</a>
-                </li>
-                <li class="footer__menu-link">
-                  <a href="./acridit">Аккредитация</a>
-                </li>
-                <li class="footer__menu-link">
-                  <a href="#gallery">Галерея</a>
-                </li>
-                <li class="footer__menu-link">
-                  <a href="#footer">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>© 2022 pushkina.edu.kg. Все права защищены.</p>
-        </div>
-      </footer>
+      {% include 'include/footer.html' %}
     </div>
-    <script src="./main.js"></script>
-    <script src="./icons/all.min.js"></script>
-  </body>
-</html>
+    {% endblock %}

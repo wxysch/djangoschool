@@ -1,55 +1,54 @@
 {% load static %}
-<footer class="footer">
-    <div class="footer__top">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__contact">
-            <h2 class="footer__contact-title">Наши контакты</h2>
-            <span></span>
-            <div class="footer__logo">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-youtube"></i>
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-          </div>
-          <div class="footer__email">
-            <h2 class="footer__email-text">
-              Тоң району, Кажы-Сай айылы <br />
-              Космонавтов көчөсү 28
-            </h2>
-            <p class="footer__email-link">
-              <a href="">03947-92394 <i class="fa-solid fa-phone"></i></a>
-            </p>
-            <h3 class="footer__email-email">
-              <a href=""
-                >sh.gim.pushkina@mail.ru <i class="fa-solid fa-envelope"></i
-              ></a>
-            </h3>
+<footer class="footer" style="background-color: #e2ac62">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__contact">
+          <h2 class="footer__contact-title">Наши контакты</h2>
+          <span></span>
+          <div class="footer__logo">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
           </div>
         </div>
-        <div class="footer__nav">
-          <ul class="footer__menu">
-            <li class="footer__menu-link">
-              <a href="./index.html">Главная</a>
-            </li>
-            <li class="footer__menu-link"><a href="#news">Новости</a></li>
-            <li class="footer__menu-link">
-              <a href="./about">О школе</a>
-            </li>
-            <li class="footer__menu-link">
-              <a href="./acridit">Аккредитация</a>
-            </li>
-            <li class="footer__menu-link">
-              <a href="#gallery">Галерея</a>
-            </li>
-            <li class="footer__menu-link">
-              <a href="#footer">Контакты</a>
-            </li>
-          </ul>
+        <div class="footer__email">
+          <h2 class="footer__email-text">
+            {{ setting.address }}
+          </h2>
+          <p class="footer__email-link">
+            <a href="">{{ setting.phone }} <i class="fa-solid fa-phone"></i></a>
+          </p>
+          <h3 class="footer__email-email">
+            <a href=""
+              >{{ setting.email }} <i class="fa-solid fa-envelope"></i
+            ></a>
+          </h3>
         </div>
       </div>
+      <div class="footer__nav">
+        <ul class="footer__menu">
+          <li class="footer__menu-link">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="footer__menu-link"><a href="#news">Новости</a></li>
+          <li class="footer__menu-link">
+            <a href="./about">О школе</a>
+          </li>
+          <li class="footer__menu-link">
+            <a href="./acridit">Аккредитация</a>
+          </li>
+          <li class="footer__menu-link">
+            <a href="#gallery">Галерея</a>
+          </li>
+          <li class="footer__menu-link">
+            <a href="#footer">Контакты</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__bottom">
-      <p>© 2022 pushkina.edu.kg. Все права защищены.</p>
-    </div>
-  </footer>
+  </div>
+  <!-- <div class="footer__bottom">
+    <p>© 2022 pushkina.edu.kg. Все права защищены.</p>
+  </div> -->
+</footer>

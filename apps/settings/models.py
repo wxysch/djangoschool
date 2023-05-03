@@ -15,3 +15,15 @@ class Settings(models.Model):
     class Meta:
         verbose_name = 'Настройка'
         verbose_name_plural = 'Настройки'
+
+class Gallery(models.Model):
+    title = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='gallery')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Галерея'
+        verbose_name_plural = 'Галереи'
+

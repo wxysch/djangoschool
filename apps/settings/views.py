@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from .models import Settings
+from django.shortcuts import render, HttpResponse
+from .models import Settings,Gallery
+from apps.news.models import News
 # Create your views here.
-def index(request):
-    setting = Settings.objects.latest('id')
+def index(request): 
     context = {
-        setting:'setting',
-    }
-    return render(request,'school/index.html',context)
+        'setting': Settings.objects.latest('id'),
+        'news':News.objects.all(),
+        'gallery':Gallery.objects.all()
+        }
+    return render(request,'school\index.html',context)
+
+def about(request):
+    return render(request,'school\about.html')

@@ -1,53 +1,53 @@
 {% load static %}
 <header class="header">
-    <div class="header__top">
-      <div class="header__content container">
-        <div class="header__title">
-          <div class="header__title-phone">
-            <i class="fa-solid fa-phone"></i>
-            <h3>{{ setting.phone }}</h3>
-          </div>
-          <div class="header__title-email">
-            <i class="fa-solid fa-envelope"></i>
-            <h3>{{ setting.email }}</h3>
-          </div>
+  <div class="header__top">
+    <div class="header__content container">
+      <div class="header__title">
+        <div class="header__title-phone">
+          <i class="fa-solid fa-phone"></i>
+          <h3>{{ setting.phone }}</h3>
         </div>
-        <div class="header__logo">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-instagram"></i>
+        <div class="header__title-email">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>{{ setting.email }}</h3>
         </div>
       </div>
-    </div>
-    <div class="header__bottom">
-      <div class="header__container container">
-        <div class="header__titles">
-          <h2 class="header__titles-title">А. Навои</h2>
-          <p class="header__titles-subtitle">
-            атындагы мектеп гимназия №18
-          </p>
-        </div>
-        <nav class="header__nav">
-          <ul class="header__menu">
-            <li class="header__menu-link">
-              <a href="./index.html">Главная</a>
-            </li>
-            <li class="header__menu-link"><a href="#news">Новости</a></li>
-            <li class="header__menu-link">
-              <a href="./about">О школе</a>
-            </li>
-            <li class="header__menu-link">
-              <a href="./acridit">Аккредитация</a>
-            </li>
-            <li class="header__menu-link">
-              <a href="#gallery">Галерея</a>
-            </li>
-            <li class="header__menu-link">
-              <a href="#footer">Контакты</a>
-            </li>
-          </ul>
-          <div class="burger-menu"><span></span></div>
-        </nav>
+      <div class="header__logo">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
       </div>
     </div>
-  </header>
+  </div>
+  <div class="header__bottom">
+    <div class="header__container container">
+      <div class="header__titles">
+        <h2 class="header__titles-title">А. Навои</h2>
+        <p class="header__titles-subtitle">
+          атындагы мектеп гимназия №18
+        </p>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-link">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="header__menu-link"><a href="#news">Новости</a></li>
+          <li class="header__menu-link">
+            <a href="{% url 'about' %}">О школе</a>
+          </li>
+          <li class="header__menu-link">
+            <a href="./acridit">Аккредитация</a>
+          </li>
+          <li class="header__menu-link">
+            <a href="#gallery">Галерея</a>
+          </li>
+          <li class="header__menu-link">
+            <a href="#footer">Контакты</a>
+          </li>
+        </ul>
+        <div class="mobile-btn"><span></span></div>
+      </nav>
+    </div>
+  </div>
+</header>
