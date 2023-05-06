@@ -25,7 +25,7 @@
                       <p class="news__content-text">
                         {{ new.description }}
                       </p>
-                      <a href="./news.html" class="news__content-link"
+                      <a href="{% url 'news_details' new.id %}" class="news__content-link"
                         >ЧИТАТЬ ДАЛЕЕ »</a
                       >
                     </div>
@@ -133,10 +133,11 @@
                   <div class="mission__content">
                     <h2 class="mission__content-number">1</h2>
                     <p class="mission__content-text">
-                      Повысить уровень обучения, умений и навыков учащихся
-                      <br />
-                      на основе внедрения новых технологий в учебно - <br />
-                      воспитательном процессе
+                      Окуучулардын окуу деңгээлин, чеберчилигин жогорулатуу
+                      <br /> 
+                      билим берүү процесси
+                      билим берүү тармагына жаңы технологияларды киргизүүнүн негизинде - <br>
+                      билим берүү процесси
                     </p>
                   </div>
                 </div>

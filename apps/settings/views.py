@@ -8,7 +8,7 @@ def index(request):
         'news':News.objects.all(),
         'gallery':Gallery.objects.all()
         }
-    return render(request,'school\index.html',context)
+    return render(request,'school/index.html',context)
 
 def about(request):
-    return render(request,'school\about.html')
+    return render(request, 'school/about.html')
